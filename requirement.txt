@@ -1,0 +1,5 @@
+Pillow==5.4.1
+PyQt5==5.11.3
+PyQt5-sip==4.19.13
+pyqt5-tools==5.11.3.1.4
+

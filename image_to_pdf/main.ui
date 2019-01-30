@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>图片转pdf</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>转成pdf的图片宽:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit">
+        <property name="inputMask">
+         <string/>
+        </property>
+        <property name="text">
+         <string>1600</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>(1-1654)</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>转成pdf的图片高:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_2">
+        <property name="text">
+         <string>2133</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>(1-2338)</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox">
+      <property name="text">
+       <string>记住我的配置</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>文件夹路径</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextEdit" name="selectFilesText"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string>选择</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>保存路径</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="saveFileText"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="text">
+         <string>选择</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="text">
+         <string>开始创建</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_4">
+        <property name="text">
+         <string>关闭</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>selectDirectory()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>768</x>
+     <y>311</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>672</x>
+     <y>349</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>selectSaveFileName()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>789</x>
+     <y>536</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>734</x>
+     <y>435</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>startCreate()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>137</x>
+     <y>567</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>276</x>
+     <y>530</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>closeDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>789</x>
+     <y>567</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>544</x>
+     <y>534</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit</sender>
+   <signal>editingFinished()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>changeImageWidth()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>418</x>
+     <y>43</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>428</x>
+     <y>23</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_2</sender>
+   <signal>editingFinished()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>changeImageHeight()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>317</x>
+     <y>66</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>21</x>
+     <y>52</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>mainWindow</receiver>
+   <slot>rememberConfig()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>50</x>
+     <y>95</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>8</x>
+     <y>101</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>selectDirectory()</slot>
+  <slot>startCreate()</slot>
+  <slot>selectSaveFileName()</slot>
+  <slot>closeDialog()</slot>
+  <slot>changeImageWidth()</slot>
+  <slot>changeImageHeight()</slot>
+  <slot>rememberConfig()</slot>
+ </slots>
+</ui>
